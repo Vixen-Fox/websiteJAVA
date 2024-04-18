@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width," initial-scale="1.0">
+        <title>Typing Game</title>
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+
+    <body>
+        <a href="index.html">Home</a>
+        <a href="SideShow.html">SlideShow</a>
+        <a href="wordShuffle.html">Word Shuffle</a>
+
+        <div id="main">
+            <H1 id="word">Words</H1>
+            <input type="text" id="input">
+
+            <p>Type the correct word in the box</p>
+            
+            <ul>
+                <li id="correct">correct: 0</li>
+                <li id="wordLength">words 0 of 0</li>
+                <li id="incrorrect">incorrect: 0</li>
+            </ul>
+        </div>
+
+        <script>
+             word_one = document.getElementById("word");
+             inputbox = document.getElementById("input");
+             correct_txt = document.getElementById("correct");
+             incorrect_txt = document.getElementById("incorrect");
+             word_count = document.getElementById("wordsLenght");
+
+             inputbox.addEventListener("keyup",keyIsUp, false);
+             
+             Secret_words =["programming", "happening", "random", "qualifications"
+            ,"momentum", "motherboard", "graphics", "inclear" ];
+
+            var score = 0;
+            var wrong = 0;
+            var i = 0;
+
+            string.prototype.shuffle = function()
+
+            {
+                var a =this.split("");
+                var n = a.length;
+
+                for(var i = n-1; i > 0; i--)
+                {
+                    var j = Math.floor(math.random()*(i+1));
+                    var tmp = a[i];
+                    a[j] = tmp;
+                }
+
+                return a.join("");
+
+                word_one.innerHTML
+            }
+
+
+
+        </script>
+    </body>
+
+
+
+
+
+</html>

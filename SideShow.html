@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>slideShow</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <a href="index.html">Home</a>
+        <a href="SideShow.html">SlideShow</a>
+        <a href="wordShuffle.html">Word Shuffle</a>
+        <div id="container">
+
+            <h1>Image SlideShow</h1>
+            <div id="image">
+                <img id="img" src="images/1.jpg" alt="">
+
+            </div>
+            <div id="controls">
+                <button onclick="Goback()">Back</button>
+                <button onclick="GoNext()">Next</button>
+            </div>
+        </div>
+
+        <script>
+            var num = 1;
+
+            var element  = document.getElementById("img");
+
+            function Goback()
+            {
+                if(num > 1)
+                {
+                    num --;
+                }
+                else
+                {
+                    num = 6;
+
+                }
+                PlayAnimation();
+            }
+
+            function GoNext()
+            {
+                if (num < 6)
+                {
+                    num ++;
+
+                }
+                else 
+                {
+                    num = 1;
+                }
+                PlayAnimation();
+            }
+
+            function PlayAnimation()
+            {
+                element.src = "images/"+num+".jpg";
+                element.classList.remove("play");
+                void element.offsetWidth;
+                element.classList.add("play");
+            }
+
+
+
+        </script>
+
+
+    </body>
+
+
+
+</html>

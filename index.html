@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML calcualtor</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+    <body>
+        <a href="index.html">Home</a>
+        <a href="SideShow.html">SlideShow</a>
+        <a href="wordShuffle.html">Word Shuffle</a>
+    <div id="main">
+        <h1> javascript calcualtor</h1>
+        <input type="text" id="numA">
+        <input type="text" id="numB">
+
+        <p>Enter two numbers above and then click am option form below</p>
+        <a href = "javascript:void(0);" onclick = "LetsDoMath('add')">Add</a>
+        <a href = "javascript:void(0);" onclick = "LetsDoMath('subtract')">Subtract</a>
+        <a href = "javascript:void(0);" onclick = "LetsDoMath('multiply')">Multiply</a>
+        <a href = "javascript:void(0);" onclick = "LetsDoMath('divide')">Divide</a>
+        <p id = "total">total is: 0000</p>
+
+    </div>
+
+    <script>
+        function LetsDoMath(type)
+        {
+        var numberA = parseInt(document.getElementById("numA").value);
+        var numberB = parseInt(document.getElementById("numB").value);
+        var total = document.getElementById("total");
+
+         switch(type)
+            {
+                 case "add":
+                total.innerHTML = "Total is: " +(numberA+numberB);
+                 break;
+
+                case "subtract":
+                total.innerHTML = "Total is: " + (numberA-numberB);
+                break;
+
+                case "multiply":
+                total.innerHTML = "Total is: " +(numberA*numberB);
+                break;
+
+                case "divide":
+                var decimal = parseFloat(numberA/numberB).toFixed(2);
+
+                total.innerHTML = "total is: " + decimal;
+                break;
+            }
+
+        }
+
+    </script>
+
+
+    </body>
+
+
+
+</html>
